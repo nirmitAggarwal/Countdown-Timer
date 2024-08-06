@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .btn-primary {
+            background-color: #C75B7A;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #921A40;
+        }
+        .timer-display {
+            background-color: #FBE8EB;
+            border: 2px solid #C75B7A;
+            color: #921A40;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4 text-gray-800 text-center">Countdown Timer</h1>
+        <div class="mb-4">
+            <label for="hours" class="block text-gray-700">Hours</label>
+            <input type="number" id="hours" class="w-full border border-gray-300 rounded-lg p-2" placeholder="0" min="0">
+        </div>
+        <div class="mb-4">
+            <label for="minutes" class="block text-gray-700">Minutes</label>
+            <input type="number" id="minutes" class="w-full border border-gray-300 rounded-lg p-2" placeholder="0" min="0">
+        </div>
+        <div class="mb-4">
+            <label for="seconds" class="block text-gray-700">Seconds</label>
+            <input type="number" id="seconds" class="w-full border border-gray-300 rounded-lg p-2" placeholder="0" min="0">
+        </div>
+        <button id="start-timer" class="btn-primary px-4 py-2 rounded-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-opacity-50 w-full">Start Timer</button>
+        <div id="timer" class="timer-display mt-4 text-3xl font-bold text-center py-2 rounded-lg">00:00:00</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
